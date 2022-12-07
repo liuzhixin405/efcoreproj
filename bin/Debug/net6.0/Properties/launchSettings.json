@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "Spider": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "apidoc",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:53212;http://localhost:53213"
+    }
+  }
+}
