@@ -1,4 +1,4 @@
-﻿using Spider.DataLayer.Model.NewsLetter;
+﻿using Reptile.DataLayer.Model.NewsLetter;
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
