@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Spider.AppStart
+namespace Reptile.AppStart
 {
     public static class NetCoreDiSetupExtensions
     {
-        public static void RegisterSpiderDi(this IServiceCollection services)
+        public static void RegisterReptileDi(this IServiceCollection services)
         {
             services.RegisterAssemblyPublicNonGenericClasses()
                 .AsPublicImplementedInterfaces();

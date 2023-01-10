@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Spider.DataLayer.Model.NewsLetter;
+using Reptile.DataLayer.Model.NewsLetter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Spider.DataLayer.Context
+namespace Reptile.DataLayer.Context
 {
     public class NewsLetterContext:DbContext
     {

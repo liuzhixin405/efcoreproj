@@ -4220,6 +4220,7 @@
     "net6.0": [
       "Microsoft.EntityFrameworkCore >= 6.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.10",
+      "Microsoft.Extensions.DependencyInjection.Abstractions >= 6.0.0",
       "Microsoft.Extensions.Hosting.Abstractions >= 6.0.0",
       "Microsoft.Orleans.CodeGenerator.MSBuild >= 3.6.5",
       "Microsoft.Orleans.OrleansTelemetryConsumers.AI >= 3.6.5",
@@ -4236,11 +4237,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Users\\86130\\Documents\\GitHub\\efcoreproj\\Spider\\Spider.csproj",
-      "projectName": "Spider",
-      "projectPath": "G:\\Users\\86130\\Documents\\GitHub\\efcoreproj\\Spider\\Spider.csproj",
+      "projectUniqueName": "G:\\IDCM162\\contract\\Reptile\\Reptile.csproj",
+      "projectName": "Reptile",
+      "projectPath": "G:\\IDCM162\\contract\\Reptile\\Reptile.csproj",
       "packagesPath": "C:\\Users\\86130\\.nuget\\packages\\",
-      "outputPath": "G:\\Users\\86130\\Documents\\GitHub\\efcoreproj\\Spider\\obj\\",
+      "outputPath": "G:\\IDCM162\\contract\\Reptile\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\86130\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -4277,6 +4278,10 @@
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[6.0.10, )"
+          },
+          "Microsoft.Extensions.DependencyInjection.Abstractions": {
+            "target": "Package",
+            "version": "[6.0.0, )"
           },
           "Microsoft.Extensions.Hosting.Abstractions": {
             "target": "Package",

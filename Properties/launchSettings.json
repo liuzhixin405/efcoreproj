@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "Spider": {
+    "Reptile": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "apidoc",

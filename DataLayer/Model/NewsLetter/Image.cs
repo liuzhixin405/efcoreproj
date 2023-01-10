@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Spider.DataLayer.Model.NewsLetter
+namespace Reptile.DataLayer.Model.NewsLetter
 {
     public class Image
     {

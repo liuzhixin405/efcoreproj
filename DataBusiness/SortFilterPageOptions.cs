@@ -1,8 +1,8 @@
 ﻿using System.Linq;
 using System;
-using Spider.DataBusiness.Dto;
+using Reptile.DataBusiness.Dto;
 
-namespace Spider.DataBusiness
+namespace Reptile.DataBusiness
 {
     public class SortFilterPageOptions
     {
@@ -20,7 +20,7 @@ namespace Spider.DataBusiness
         /// </summary>
         public int[] PageSizes = new[] { 5, DefaultPageSize, 20, 50, 100, 500, 1000 };
 
-        public OrderByOptions OrderByOptions { get; set; }
+        public OrderByOptions OrderByOptions { get; set; } = OrderByOptions.ByDateDesc;
 
         public FilterBy FilterBy { get; set; }
 

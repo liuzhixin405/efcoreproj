@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Spider.DataLayer.Model.NewsLetter
+namespace Reptile.DataLayer.Model.NewsLetter
 {
     public class LivesItem
     {
@@ -89,7 +89,8 @@ namespace Spider.DataLayer.Model.NewsLetter
         /// <summary>
         /// 
         /// </summary>
-        public string extra { get; set; }
+        [NotMapped]
+        public List<Extra> extra { get; set; }
         /// <summary>
         /// 
         /// </summary>

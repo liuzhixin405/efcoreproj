@@ -3,7 +3,7 @@ using System;
 using System.Linq;
 using System.Transactions;
 
-namespace Spider.Utility.QueryObjects
+namespace Reptile.Utility.QueryObjects
 {
     public static class GenericPaging
     {

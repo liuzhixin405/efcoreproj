@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Users\\86130\\Documents\\GitHub\\projectforefcore\\Reptile\\Reptile.csproj": {}
+    "G:\\IDCM162\\contract\\Reptile\\Reptile.csproj": {}
   },
   "projects": {
-    "G:\\Users\\86130\\Documents\\GitHub\\projectforefcore\\Reptile\\Reptile.csproj": {
+    "G:\\IDCM162\\contract\\Reptile\\Reptile.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Users\\86130\\Documents\\GitHub\\projectforefcore\\Reptile\\Reptile.csproj",
+        "projectUniqueName": "G:\\IDCM162\\contract\\Reptile\\Reptile.csproj",
         "projectName": "Reptile",
-        "projectPath": "G:\\Users\\86130\\Documents\\GitHub\\projectforefcore\\Reptile\\Reptile.csproj",
+        "projectPath": "G:\\IDCM162\\contract\\Reptile\\Reptile.csproj",
         "packagesPath": "C:\\Users\\86130\\.nuget\\packages\\",
-        "outputPath": "G:\\Users\\86130\\Documents\\GitHub\\projectforefcore\\Reptile\\obj\\",
+        "outputPath": "G:\\IDCM162\\contract\\Reptile\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\86130\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -48,6 +48,10 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.10, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             },
             "Microsoft.Extensions.Hosting.Abstractions": {
               "target": "Package",

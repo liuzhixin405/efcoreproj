@@ -1,26 +1,34 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Spider.AppStart;
-using Spider.BackService;
-using Spider.DataLayer;
-using Spider.DataLayer.Context;
-using Spider.DbContextFactory;
+using Reptile.AppStart;
+using Reptile.BackService;
+using Reptile.DataLayer;
+using Reptile.DataLayer.Context;
+using Reptile.DbContextFactory;
 using System.Threading.Tasks;
 
-namespace Spider
+namespace Reptile
 {
     internal class Program
     {
         static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddControllers();
-            builder.Services.RegisterSpiderDi();
+            builder.Services.AddControllers()
+                     .ConfigureApiBehaviorOptions(options =>
+            {
+                options.SuppressConsumesConstraintForFormFileParameters = true;
+                options.SuppressInferBindingSourcesForParameters = true;
+                options.SuppressModelStateInvalidFilter = true;
+            }); ;
+            builder.Services.RegisterReptileDi();
             builder.Services.AddSwaggerSetUp();
             builder.Services.AddDbContext<NewsLetterContext>();
+            builder.Services.AddDbContext<CoinMarketCapContext>();
             builder.Services.SetupDatabase();
             builder.Services.AddHostedService<BackNewsLetterService>();
+            builder.Services.AddHostedService<CoinMarketCapService>();
 
             var app = builder.Build();
             app.UseSwagger();

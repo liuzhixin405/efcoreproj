@@ -4,14 +4,16 @@ using Microsoft.Extensions.Logging;
 using System.Threading.Tasks;
 using System;
 using Microsoft.Extensions.DependencyInjection;
-using Spider.DataLayer.Context;
+using Reptile.DataLayer.Context;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using Microsoft.EntityFrameworkCore.Storage;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Spider.DbContextFactory;
+using Reptile.DbContextFactory;
+using Microsoft.OpenApi.Writers;
+using static System.Formats.Asn1.AsnWriter;
 
-namespace Spider.DataLayer
+namespace Reptile.DataLayer
 {
     public static class DatabaseStartup
     {
@@ -21,14 +23,36 @@ namespace Spider.DataLayer
             {
                 var services = scope.ServiceProvider;
                 //var env = services.GetRequiredService<IWebHostEnvironment>();
-                var contextFactory = services.GetRequiredService<INewsLetterContextFactory>();
-                var context = contextFactory.Create(Enum.WriteAndReadEnum.Read);
+                var contextFactory = services.GetRequiredService<IReptileDbContextFactory>();
+                var context = contextFactory.CreateNewsLetterContext(Enum.WriteAndReadEnum.Read);
                 try
                 {
                     if (!(context.GetService<IDatabaseCreator>() as RelationalDatabaseCreator).Exists()) //数据库不存在自动创建，并建表
                     {
                          context.Database.EnsureDeleted();
                          context.Database.EnsureCreated();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    var logger = services.GetRequiredService<ILogger<Program>>();
+                    logger.LogError(ex, "An error occurred while creating/migrating or seeding the database.");
+                    throw;
+                }
+            }
+
+            using(var scope=service.BuildServiceProvider().CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                //var env = services.GetRequiredService<IWebHostEnvironment>();
+                var contextFactory = services.GetRequiredService<IReptileDbContextFactory>();
+                var context = contextFactory.CreateCoinMarketCapContext(Enum.WriteAndReadEnum.Read);
+                try
+                {
+                    if (!(context.GetService<IDatabaseCreator>() as RelationalDatabaseCreator).Exists()) //数据库不存在自动创建，并建表
+                    {
+                        context.Database.EnsureDeleted();
+                        context.Database.EnsureCreated();
                     }
                 }
                 catch (Exception ex)

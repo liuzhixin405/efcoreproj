@@ -2,7 +2,7 @@
 using Microsoft.OpenApi.Models;
 using System;
 
-namespace Spider.AppStart
+namespace Reptile.AppStart
 {
     public static class SwaggerSetUp
     {

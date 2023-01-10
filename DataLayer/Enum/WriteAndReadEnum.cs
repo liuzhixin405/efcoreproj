@@ -1,4 +1,4 @@
-﻿namespace Spider.DataLayer.Enum
+﻿namespace Reptile.DataLayer.Enum
 {
     public enum WriteAndReadEnum
     {
